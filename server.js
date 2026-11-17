@@ -4,10 +4,24 @@ const app = express();
 const port = 3000;
 
 app.get('/', function(req,res){
-    res.send('Olá, mundo! minha senha é ' + process.env.senhaBancodeDados);
-
+    res.send('Bem Vindo!');
 });
+
+app.post('/produtos', (req,res) => {
+    res.send('Produto adicionado com sucesso!')
+
+})
+
+app.put('/produtos/:id', (req,res) => {
+    let id = req.params.id;
+    res.send(`O produto ${id} alterado!`)
+})
+
+app.delete('/produtos/:id', (req,res) => {
+    let id = req.params.id;
+    res.send(`O produto ${id} foi deletado!`)
+})
 
 app.listen(port, function(){
     console.log('Servidor rodando na porta ' + port);
-});
+})
