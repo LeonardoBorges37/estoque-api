@@ -1,0 +1,9 @@
+$schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+$kind: collection
+info:
+  name: Estoque API
+  description: 'Collection for the Estoque API - a simple inventory control API built with Node.js and Express.'
+variable:
+  - key: base_url
+    value: 'http://localhost:3000'
+    type: string

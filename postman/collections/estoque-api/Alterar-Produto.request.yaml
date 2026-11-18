@@ -1,0 +1,19 @@
+$kind: http-request
+name: Alterar Produto
+order: 3000
+method: PUT
+url: '{{base_url}}/produtos/{{id}}'
+pathVariables:
+  - key: id
+    value: '1'
+    description: ID do produto a ser alterado
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nome": "Produto Atualizado",
+      "quantidade": 20,
+      "preco": 49.99
+    }
